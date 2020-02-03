@@ -155,23 +155,23 @@ func NewConverter() Converter {
 		UNIT_TYPE_WEIGHT,
 		WEIGHT_METRIC,
 	}
-	ton := Unit{
-		"тонн",
+	funt := Unit{
+		"фунт",
 		false,
-		0.001,
+		2.20462,
 		UNIT_TYPE_WEIGHT,
-		WEIGHT_METRIC,
+		WEIGHT_TROY,
 	}
-	ton := Unit{
-		"тонн",
+	uncia := Unit{
+		"унция",
 		false,
-		0.001,
+		35.274,
 		UNIT_TYPE_WEIGHT,
-		WEIGHT_METRIC,
+		WEIGHT_TROY,
 	}
 
 	units := []Unit{millimeter, centimeter, meter, kiloMeter, yard, kilogram, ton, decimeter, mile, foot, inch,
-		nauticalMile, nauticalLeague, cable, gramm, millgramm,
+		nauticalMile, nauticalLeague, cable, gramm, millgramm, uncia, funt,
 	}
 
 	c.mainUnits = map[int]Unit{}
