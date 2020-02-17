@@ -50,6 +50,10 @@ func NewDictionary(c *Converter) Dictionary {
 		"Международные морские еденицы",
 	}
 
+	d.unitSystems[LENGTH_SLAVIC] = UnitSystem{
+		"Древнерусская",
+	}
+
 	d.unitSystems[WEIGHT_METRIC] = UnitSystem{
 		"Метрическая система",
 	}

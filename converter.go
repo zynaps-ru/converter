@@ -4,6 +4,8 @@ const (
 	LENGTH_METRIC = iota
 	LENGTH_BRITISH
 	LENGTH_NAUTICAL
+	LENGTH_SLAVIC
+
 
 	WEIGHT_METRIC = iota
 	WEIGHT_TROY
@@ -58,6 +60,37 @@ func NewConverter() Converter {
 		0.001,
 		UNIT_TYPE_LENGTH,
 		LENGTH_METRIC,
+	}
+
+	arhin := Unit{
+		"аршина",
+		false,
+		1.40607424072,
+		UNIT_TYPE_LENGTH,
+		LENGTH_SLAVIC,
+	}
+
+	lokt := Unit{
+		"локоть",
+		false,
+		2.38095238095,
+		UNIT_TYPE_LENGTH,
+		LENGTH_SLAVIC,
+	}
+
+	sajen := Unit{
+		"сажень",
+		false,
+		0.46869141357,
+		UNIT_TYPE_LENGTH,
+		LENGTH_SLAVIC,
+	}
+	versta := Unit{
+		"верста",
+		false,
+		0.00093738283,
+		UNIT_TYPE_LENGTH,
+		LENGTH_SLAVIC,
 	}
 
 	decimeter := Unit{
@@ -171,7 +204,7 @@ func NewConverter() Converter {
 	}
 
 	units := []Unit{millimeter, centimeter, meter, kiloMeter, yard, kilogram, ton, decimeter, mile, foot, inch,
-		nauticalMile, nauticalLeague, cable, gramm, millgramm, uncia, funt,
+		nauticalMile, nauticalLeague, cable, gramm, millgramm, uncia, funt, arhin, lokt, sajen, versta,
 	}
 
 	c.mainUnits = map[int]Unit{}
